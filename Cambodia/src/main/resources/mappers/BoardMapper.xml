@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.kjm.mapper.BoardMapper"> 
+	
+	<insert id="registCambodia">
+		INSERT INTO cambodia(year,id,io,product)  VALUES(#{year}, #{id}, #{io}, #{product})
+	</insert>
+	
+	<select id="getCambodiaYear" resultType="com.kjm.vo.CambodiaVO">
+		select * from cambodia where year=#{year} and io=#{io}
+	</select>
+	<update id="updateCam">
+		UPDATE cambodia SET product=#{product} WHERE year=#{year} and id=#{id}
+		
+	</update>
+	
+	<insert id="registCambodiaList" parameterType="hashmap">
+		<if test="camList.size != 0">
+			insert INTO cambodia(year,id,io,product)  VALUES
+			<foreach collection="camList" item="item" separator=",">
+				(#{item.year},#{item.id},#{item.io},#{item.product})
+			</foreach>
+		</if>
+	</insert>
+	
+	
+</mapper>
