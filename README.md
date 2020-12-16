@@ -8,7 +8,7 @@
 - 요청 값을 바꾸며 데이터를 받아 엑셀에 저장시키는  프로그램 제작
 
 ## 구성
-![main](./CambodiaStatistics/src/main/resources/image/main.PNG)
+![main](./Cambodia/src/main/resources/image/main.PNG)
 
 ## 진행 프로세스
 
@@ -18,9 +18,9 @@
 - 완료 후 cambodia_excel 버튼을 통한 cambodia 호출
 - cambodia는 해당 품목 별 나라 관계를 가진 데이터 oec.wordl에 재요청 후 엑셀 형태로 데이터 추출
 
-![excel](./CambodiaStatistics/src/main/resources/image/excel.PNG)
+![excel](./Cambodia/src/main/resources/image/excel.PNG)
 
-![ex](./CambodiaStatistics/src/main/resources/image/ex.PNG)
+![ex](./Cambodia/src/main/resources/image/ex.PNG)
 
 ## 문제점
 
